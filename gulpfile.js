@@ -43,7 +43,7 @@ gulp.task('sass', function () {
 
 gulp.task('coffee', function() {
     gulp.src(coffeeSources)
-        .pipe(coffee({ bare: true }).on('error', gutil.log))
+        .pipe(coffee().on('error', gutil.log))
         .pipe(gulp.dest('coffee-compiled'))
 });
 
